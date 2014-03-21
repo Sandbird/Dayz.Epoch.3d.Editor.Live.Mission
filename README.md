@@ -52,13 +52,13 @@ The only extra addition to this is the _survival state of the player. That is cr
     /*
         OK or Error               = _primary select 0;
         Is newPlayer (true/false) = _primary select 1;
-        _charID                   =    _primary select 2;
+        _charID                   = _primary select 2;
         _isInfected (1/0)         = _primary select 3;
         _inventory                = _primary select 4;
         _backpack                 = _primary select 5;
-        _survival                 =    _primary select 6;  //last ate+ last drunk +totalminutes alive
-        _model                    =    _primary select 7;
-        _hiveVer                  =    _primary select 8;
+        _survival                 = _primary select 6;  //last ate+ last drunk +totalminutes alive
+        _model                    = _primary select 7;
+        _hiveVer                  = _primary select 8;
     */
 
     primaryPre = [

@@ -1,7 +1,7 @@
 Dayz.Epoch.3d.Editor.Live.Mission
 =================
 
-[![ScreenShot](http://i1.ytimg.com/vi/e4DKLVoBQgA/mqdefault.jpg)](http://youtu.be/e4DKLVoBQgA)
+[![ScreenShot](http://oi58.tinypic.com/2s0fde8.jpg)](http://youtu.be/e4DKLVoBQgA)
 
 A mission file for the purpose of testing/writing scripts for [DayZ Epoch](https://github.com/vbawol/DayZ-Epoch) without the need of a server.
 It emulates the dayz_server and dayz_mission files, for live testing of code inside the 3d editor.

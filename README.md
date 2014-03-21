@@ -49,49 +49,49 @@ player setVariable ["playerUID", "111111", true]; // Your player's UID
 Further down is our first fake database entry. The first and second value, leave it like that. The 3rd has to be the same value as the one above.
 The only extra addition to this is the _survival state of the player. That is created in the dayz_server.pbo so i had to emulate the values.
 ~~~~java
-	/*
-		OK or Error 							= _primary select 0;
-		Is newPlayer (true/false) = _primary select 1;
-		_charID   								=	_primary select 2;
-		_isInfected (1/0)					= _primary select 3;
-		_inventory 								= _primary select 4;
-		_backpack 								= _primary select 5;
-		_survival									=	_primary select 6;  //last ate+ last drunk +totalminutes alive
-		_model 										=	_primary select 7;
-		_hiveVer 									=	_primary select 8;
-	*/
+    /*
+        OK or Error               = _primary select 0;
+        Is newPlayer (true/false) = _primary select 1;
+        _charID                   =    _primary select 2;
+        _isInfected (1/0)         = _primary select 3;
+        _inventory                = _primary select 4;
+        _backpack                 = _primary select 5;
+        _survival                 =    _primary select 6;  //last ate+ last drunk +totalminutes alive
+        _model                    =    _primary select 7;
+        _hiveVer                  =    _primary select 8;
+    */
 
-	primaryPre = [
-	"OK",
-	false,
-	"1", // My charID
-	"0",
-	[["ItemMap","ItemWatch","ItemToolbox","ItemFlashlightRed","Binocular_Vector","M9SD","NVGoggles","ItemRadio","ItemEtool","ItemHatchet_DZE","ItemCrowbar","ItemMatchbox_DZE","M4A1_HWS_GL_SD_Camo","ItemKnife","ItemCompass"],["30Rnd_556x45_StanagSD","30Rnd_556x45_StanagSD","30Rnd_556x45_StanagSD","FoodSteakCooked","ItemSodaCoke","PartGeneric","PartGeneric","PartWheel","PartWheel","15Rnd_9x19_M9SD","15Rnd_9x19_M9SD","ItemBandage","ItemBandage","ItemBandage"]],
-	["DZ_Backpack_EP1",[["AK_47_S"],[1]],[["ItemBloodbag"],[2]]],
-	[4320,114.9,42.753],   // ------ This is the only extra thing i had to add: 4320 means 3 days (survival time) in minutes, 114.9: last ate, 42.753: last drunk   -----
-	"TK_Commander_EP1_DZ",
-	11];
+    primaryPre = [
+    "OK",
+    false,
+    "1", // My charID
+    "0",
+    [["ItemMap","ItemWatch","ItemToolbox","ItemFlashlightRed","Binocular_Vector","M9SD","NVGoggles","ItemRadio","ItemEtool","ItemHatchet_DZE","ItemCrowbar","ItemMatchbox_DZE","M4A1_HWS_GL_SD_Camo","ItemKnife","ItemCompass"],["30Rnd_556x45_StanagSD","30Rnd_556x45_StanagSD","30Rnd_556x45_StanagSD","FoodSteakCooked","ItemSodaCoke","PartGeneric","PartGeneric","PartWheel","PartWheel","15Rnd_9x19_M9SD","15Rnd_9x19_M9SD","ItemBandage","ItemBandage","ItemBandage"]],
+    ["DZ_Backpack_EP1",[["AK_47_S"],[1]],[["ItemBloodbag"],[2]]],
+    [4320,114.9,42.753],   // ------ This is the only extra thing i had to add: 4320 means 3 days (survival time) in minutes, 114.9: last ate, 42.753: last drunk   -----
+    "TK_Commander_EP1_DZ",
+    11];
 ~~~~
 
 The second part is this
 ~~~~
-	/*
-		OK or Error 							= _primary select 0;
-		_medical								  = _primary select 1;
-		_stats   									=	_primary select 2;
-		_state										= _primary select 3;
-		_worldspace 							= _primary select 4;
-		_humanity 								= _primary select 5;
-		_lastinstance							=	_primary select 6;
-	*/
-	secondaryPre = [
-	"OK",
-	[false,false,false,false,false,false,false,6000,[],[0,0],0,[114.9,42.753]],
-	[10,20,1,22],
-	["M9SD","aidlpknlmstpsraswpstdnon_player_idlesteady02",42,["222222","333333"]],  //42 is the temperature, ["222222","333333"] are my friend UIDs
-	[91,[4965.1968,10002.998,0.001]],
-	11000,
-	11];
+    /*
+        OK or Error        = _primary select 0;
+        _medical           = _primary select 1;
+        _stats             = _primary select 2;
+        _state             = _primary select 3;
+        _worldspace        = _primary select 4;
+        _humanity          = _primary select 5;
+        _lastinstance      = _primary select 6;
+    */
+    secondaryPre = [
+    "OK",
+    [false,false,false,false,false,false,false,6000,[],[0,0],0,[114.9,42.753]],
+    [10,20,1,22],
+    ["M9SD","aidlpknlmstpsraswpstdnon_player_idlesteady02",42,["222222","333333"]],  //42 is the temperature, ["222222","333333"] are my friend UIDs
+    [91,[4965.1968,10002.998,0.001]],
+    11000,
+    11];
 ~~~~
 
 This is the medical condition, kill stats, stance, friendlist, coordinates, humanity and instance of the player.

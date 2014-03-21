@@ -86,10 +86,10 @@ The second part is this
     */
     secondaryPre = [
     "OK",
-    [false,false,false,false,false,false,false,6000,[],[0,0],0,[114.9,42.753]],
-    [10,20,1,22],
+    [false,false,false,false,false,false,false,6000,[],[0,0],0,[114.9,42.753]],  // 6000 blood
+    [10,20,1,22],   // Kill stats
     ["M9SD","aidlpknlmstpsraswpstdnon_player_idlesteady02",42,["222222","333333"]],  //42 is the temperature, ["222222","333333"] are my friend UIDs
-    [91,[4965.1968,10002.998,0.001]],
+    [91,[4965.1968,10002.998,0.001]], // Coordinates
     11000,
     11];
 ~~~~

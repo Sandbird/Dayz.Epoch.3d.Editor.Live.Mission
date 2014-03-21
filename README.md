@@ -148,6 +148,7 @@ The other bot can be deleted. I just left it there because i was testing a Tag F
 
 ### Bugs
 
+* I disabled the call player_switchModel, on the Fake database method..meaning it wont switch the player to your skin when you press Preview, because it deletes one player and creates a new one. When this happens it kinda breaks tons of stuff. If you want to enable it its at line 70 in the ***dayz_code\init\setupChar_Database.sqf***
 * Sometimes the player will spawn twice. That's because when you Preview the map you are also the Server and the Player. The code runs twice....hence the bugs with the 2nd method with the fake database.
 Sometimes the dayz_Login and Setup method get all messed up cause in the 3d editor you have to have a Playable character for the mission to start...but dayz server doesnt work this way.
 I did my best to 'ignore' the manually added player in the beidi file and use the player the game makes (2nd method) but sometimes this whole isServer isPlayer as well messes up things.

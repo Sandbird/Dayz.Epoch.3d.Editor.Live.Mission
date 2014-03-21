@@ -160,6 +160,5 @@ The whole purpose of this project was to not waste any more time trying to code 
 Sure there are little tricks and hacks you can add to ***diag_log*** variables, but to write an actual script that requires interaction with the environment or beta testing custom script ??? Forget it.
 I've included the Deploy bike and Self bloodbag scripts in the pack...just to see how easy it is to add/run/debug them. (Check the youtube video).
 
-And on a personal note....You will NEVER find an easier way to code stuff for Dayz. 
-I've been to both Epoch and Opendayz forums trying for months to find help on the proper way to code stuff and i am sorry to say it...besides the usual, "use axe's debbuger" i got 0 good intel.
-I hope this code will help you write code faster and easier :)
+And a personal note....You will NEVER find an easier way to code stuff for Dayz....period. I've been begging both here and on Opendayz for a Guru to point me to the right direction for fast coding/debugging code in  Dayz and i got nothing.
+Only some debuggers for a glorified diag_log option. This is the fastest way to write code and see it action.

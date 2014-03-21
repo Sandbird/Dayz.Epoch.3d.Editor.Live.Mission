@@ -161,4 +161,6 @@ Sure there are little tricks and hacks you can add to ***diag_log*** variables, 
 I've included the Deploy bike and Self bloodbag scripts in the pack...just to see how easy it is to add/run/debug them. (Check the youtube video).
 
 And a personal note....You will NEVER find an easier way to code stuff for Dayz....period. I've been begging both here and on Opendayz for a Guru to point me to the right direction for fast coding/debugging code in  Dayz and i got nothing.
-Only some debuggers for a glorified diag_log option. This is the fastest way to write code and see it action.
+This is the fastest way to write code and see it action. 
+
+Hope this code will help you write code faster and easier :)

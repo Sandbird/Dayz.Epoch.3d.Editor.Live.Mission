@@ -17,7 +17,7 @@ It emulates the dayz_server and dayz_mission files, for live testing of code ins
 
 ### DayzEpochTemplate.Chernarus:
 1. Click "[Download Zip](https://github.com/Sandbird/Dayz.Epoch.3d.Editor.Live.Mission/archive/master.zip)" on the right sidebar
-2. Extract the file in your \My Documents\ArmA 2\missions
+2. Extract the Chernarus mission file in your \My Documents\ArmA 2\missions
 3. Copy the DayzEpoch.bat file (included in the .zip) in your Arma2 OA root directory and execute it.  
 4. When the game launches, press Alt+E, select Chernarus, then Load and select mission DayzEpochTemplate.
 5. Start editing your files located in \My Documents\ArmA 2\missions\DayzEpochTemplate with your customizations.

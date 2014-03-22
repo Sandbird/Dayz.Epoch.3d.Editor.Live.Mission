@@ -129,14 +129,14 @@ Also some BIS_fnc functions have to be included in the ***dayz_code\init\compile
 BIS_fnc_invAdd = 				compile preprocessFileLineNumbers "dayz_code\system\functions\inventory\fn_invAdd.sqf";	
 ~~~~
 If your code has BIS_fnc functions in it then check the folder ***dayz_code\system\functions*** for the function and include it in the compiles.sqf.
+I am sure there is a way to parse the folder and add a BIS_ infront of all the files, like epoch does it...but i didnt want to waste time and ran into problems, 
+so manually adding the files is fine by me.
 
 Use the debug option in the init.sqf if you are using the 2nd method (fake database entry). And ALWAYS check your RPT log file for debugging. Its located at : %AppData%\Local\ArmA 2 OA
+Also enable this in the init.sqf if you want more details:
 ~~~~
 DZEdebug = true;  // Debug messages on log file
 ~~~~
-
-I am sure there is a way to parse the folder and add a BIS_ infront of all the files, like epoch does it...but i didnt want to waste time and ran into problems, 
-so manually adding the files is fine by me.
 
 Dont let the file names trick you...These are heavily modified files...Dont overwrite them with your own files. Add to them instead of replacing them.
 

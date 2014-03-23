@@ -63,7 +63,6 @@ dayz_myItems = 			items player;		//Array of last checked items
 dayz_myMagazines = 	magazines player;
 dayz_playerName = name player;
 
-dayz_characterID =		player getVariable ["CharacterID","0"];
 dayz_myCursorTarget = cursortarget;
 dayz_myPosition = 		getPosATL player;	//Last recorded position
 dayz_lastMeal =			(3 * 60);
@@ -83,6 +82,7 @@ r_player_blood = 		player getVariable["USEC_BloodQty",r_player_bloodTotal];
        
 //player variables
 player setVariable ["CharacterID", "1", true];
+dayz_characterID =		player getVariable ["CharacterID","0"];
 player setVariable ["playerUID", "111111", true];
 _playerUID = player getVariable ["playerUID", 0];
 dayz_playerUID = _playerUID;  // Fix...This has to be initiated after it was set

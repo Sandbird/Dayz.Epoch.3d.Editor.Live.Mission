@@ -61,7 +61,6 @@ if (isNil "freshSpawn") then {
 dayz_myWeapons = 		weapons player;		//Array of last checked weapons
 dayz_myItems = 			items player;		//Array of last checked items
 dayz_myMagazines = 	magazines player;
-dayz_playerUID = _playerUID;
 dayz_playerName = name player;
 
 dayz_characterID =		player getVariable ["CharacterID","0"];
@@ -86,6 +85,7 @@ r_player_blood = 		player getVariable["USEC_BloodQty",r_player_bloodTotal];
 player setVariable ["CharacterID", "1", true];
 player setVariable ["playerUID", "111111", true];
 _playerUID = player getVariable ["playerUID", 0];
+dayz_playerUID = _playerUID;  // Fix...This has to be initiated after it was set
 //Initial State of player
 dayz_Survived = 10;
 player setVariable["humanity", 11000];

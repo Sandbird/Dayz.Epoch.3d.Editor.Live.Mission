@@ -22,6 +22,8 @@ if (!isNull cursorTarget and !_inVehicle and !_isPZombie and (player distance cu
 	// set cursortarget to variable
 	_cursorTarget = cursorTarget;
 	_typeOfCursorTarget = typeOf _cursorTarget;
+  _ownerID = _cursorTarget getVariable ["CharacterID","0"];
+	_playerUID = player getVariable ["playerUID", 0];
 
 	//cutText [format["CursTarget: %1",cursorTarget], "PLAIN DOWN"];
 
@@ -35,6 +37,13 @@ if (!isNull cursorTarget and !_inVehicle and !_isPZombie and (player distance cu
 	_playerUID
 	], "PLAIN DOWN"];
 */
+	
+		// Example on how to use _adminList
+    if((typeOf(cursortarget) == "Plastic_Pole_EP1_DZ") and _ownerID != "0" and (player distance _cursorTarget < 2)) then {
+        if (_playerUID in _adminList) then {
+            cutText [format["Plot Pole Owner PUID is: %1",_playerUID], "PLAIN DOWN"];
+        };
+     };
 	
 
 	//Deployable Vehicles

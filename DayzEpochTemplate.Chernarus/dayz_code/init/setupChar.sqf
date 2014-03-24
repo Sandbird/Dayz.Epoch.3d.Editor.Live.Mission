@@ -1,4 +1,4 @@
-private ["_isHiveOk","_newPlayer","_isInfected","_model","_backpackMagTypes","_backpackMagQty","_backpackWpnTypes","_backpackWpnQtys","_countr","_isOK","_backpackType","_backpackWpn","_backpackWater","_mags","_wpns","_bcpk","_bcpkWpn","_config","_playerUID","_msg","_myTime","_charID","_inventory","_backpack","_survival","_isNew","_version","_debug","_lastAte","_lastDrank","_usedFood","_usedWater","_worldspace","_state","_setDir","_setPos","_legs","_arms","_totalMins","_days","_hours","_mins","_messing"];
+private ["_isHiveOk","_newPlayer","_isInfected","_model","_backpackMagTypes","_backpackMagQty","_backpackWpnTypes","_backpackWpnQtys","_countr","_isOK","_backpackType","_backpackWpn","_backpackWater","_mags","_magsb","_wpns","_bcpk","_bcpkWpn","_config","_playerUID","_msg","_myTime","_charID","_inventory","_backpack","_survival","_isNew","_version","_debug","_lastAte","_lastDrank","_usedFood","_usedWater","_worldspace","_state","_setDir","_setPos","_legs","_arms","_totalMins","_days","_hours","_mins","_messing"];
 progressLoadingScreen 0.8;
 if (isNil "freshSpawn") then {
 	freshSpawn = 0;
@@ -13,11 +13,15 @@ if (isNil "freshSpawn") then {
 		removeBackpack player;
 		_config = (configFile >> "CfgSurvival" >> "Inventory" >> "Default");
 		_mags = getArray (_config >> "magazines");
+		_magsb = getArray (_config >> "magazines");
 		_wpns = getArray (_config >> "weapons");		
 		_bcpk = getText (_config >> "backpack");
 		_bcpkWpn = getText (_config >> "backpackWeapon");
 		if(!isNil "DefaultMagazines") then {
 			_mags = DefaultMagazines;
+		};
+		if(!isNil "DefaultBackpackMagazines") then {
+			_magsb = DefaultBackpackMagazines;
 		};
 		if(!isNil "DefaultWeapons") then {
 			_wpns = DefaultWeapons;
@@ -41,7 +45,6 @@ if (isNil "freshSpawn") then {
 				player addWeapon _x;
 			};
 		} forEach _wpns;
-		
 		if (_bcpk != "") then {
 			player addBackpack _bcpk; 
 			dayz_myBackpack =	unitBackpack player;
@@ -49,6 +52,12 @@ if (isNil "freshSpawn") then {
 		if (_bcpkWpn != "") then {
 			dayz_myBackpack addWeaponCargoGlobal [_bcpkWpn,1];
 		};
+		{
+			_isOK = 	isClass(configFile >> "CfgMagazines" >> _x);
+			if (_isOK) then {
+				dayz_myBackpack addMagazineCargoGlobal [_x,1];
+			};
+		} forEach _magsb;
 //	};
  };
 
@@ -92,7 +101,7 @@ player setVariable["humanity", 11000];
 player setVariable["humanKills", 10];
 player setVariable["banditKills", 20];
 player setVariable["zombieKills", 30];
-player setVariable ["friendlies", ["222222"], true]; //Both DZE_Friends and this must be set for friendlies to work properly
-DZE_Friends = ["222222"];
+player setVariable ["friendlies", ["222222","333333"], true]; //Both DZE_Friends and this must be set for friendlies to work properly
+DZE_Friends = ["222222","333333"];
 
 dayz_loadScreenMsg =  "Character Data received";

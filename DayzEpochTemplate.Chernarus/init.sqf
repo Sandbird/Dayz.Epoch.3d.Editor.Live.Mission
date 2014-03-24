@@ -1,3 +1,6 @@
+if (isNil "oneTime") then { 
+	//run init.sqf only once	
+	
 if (isServer) then {
 if (isnil "bis_fnc_init") then {
 _side = createCenter sideLogic;
@@ -66,10 +69,11 @@ DZE_MissionLootTable = false;		//Custom Loottables activated
 // Default loadout like init.sqf loadout...or read a 'fake' database loadout.
 DefaultTruePreMadeFalse = true;
 // Premake player settings in sdbd_fnc_login and sdbd_fnc_setup
-DefaultMagazines = ["ItemBandage","ItemBandage","ItemPainkiller","ItemMorphine","FoodSteakCooked","ItemSodaCoke","ItemBloodbag","SmokeShell","30Rnd_556x45_StanagSD","30Rnd_556x45_StanagSD","15Rnd_9x19_M9SD","PartGeneric","PartGeneric","PartWheel","PartWheel"];
-DefaultWeapons 	=  ["ItemMap","ItemWatch","ItemToolbox","ItemFlashlightRed","ItemMachete","M9SD","M4A1_AIM_SD_camo","ItemGPS"];
+DefaultMagazines = ["ItemBandage","ItemBandage","ItemPainkiller","ItemMorphine","FoodSteakCooked","ItemSodaCoke","ItemBloodbag","SmokeShell","20Rnd_762x51_DMR","20Rnd_762x51_DMR","15Rnd_9x19_M9SD","PartGeneric","PartGeneric","PartWheel","PartWheel"];
+DefaultWeapons 	=  ["ItemMap","ItemWatch","ItemToolbox","ItemFlashlightRed","ItemMachete","M9SD","DMR","ItemGPS","Binocular_Vector"];
 DefaultBackpack = "DZ_Backpack_EP1";
-DefaultBackpackWeapon = "";
+DefaultBackpackWeapon = "M4A1_AIM_SD_camo";
+DefaultBackpackMagazines = ["30Rnd_556x45_StanagSD","30Rnd_556x45_StanagSD"];
 //To show debug messages in the RPT file
 DZEdebug = false;  // Debug messages on log file
 ////////////////////////////////////////////////////////////////////////////
@@ -111,3 +115,6 @@ execVM "\z\addons\dayz_code\external\DynamicWeatherEffects.sqf";
 
 // Custom Scripts
 call compile preprocessFileLineNumbers "custom\bloodbag\init.sqf";   // Bloodbag script
+
+
+};

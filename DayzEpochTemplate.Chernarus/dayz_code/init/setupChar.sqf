@@ -1,4 +1,9 @@
 private ["_isHiveOk","_newPlayer","_isInfected","_model","_backpackMagTypes","_backpackMagQty","_backpackWpnTypes","_backpackWpnQtys","_countr","_isOK","_backpackType","_backpackWpn","_backpackWater","_mags","_magsb","_wpns","_bcpk","_bcpkWpn","_config","_playerUID","_msg","_myTime","_charID","_inventory","_backpack","_survival","_isNew","_version","_debug","_lastAte","_lastDrank","_usedFood","_usedWater","_worldspace","_state","_setDir","_setPos","_legs","_arms","_totalMins","_days","_hours","_mins","_messing"];
+if(isNil "DZEdebug") then { DZEdebug = false; };
+_debug = DZEdebug;
+if (_debug) then {
+	diag_log ("PSETUP: Initating");
+};
 progressLoadingScreen 0.8;
 if (isNil "freshSpawn") then {
 	freshSpawn = 0;

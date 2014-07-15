@@ -1,4 +1,5 @@
 if (isNil "oneTime") then { 
+oneTime = true;
 	//run init.sqf only once	
 	
 if (isServer) then {
